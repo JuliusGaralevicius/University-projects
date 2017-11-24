@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel = "stylesheet" type="text/css" href = "Style.css"/>
+    <title>Analytics</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+    <script src = "ScalingDoughnut.js" type="text/javascript"></script>
+    <script src = "StackedChart.js" type ="text/javascript"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primaryNav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="primaryNav">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="Attendance.html">Attendance</a></li>
+            <li><a href="Exams.html">Exams</a></li>
+            <li><a href="Coursework.html">Coursework</a></li>
+            <li><a href="GroupData.html">Group Data</a></li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav secondMenu">
+            <li><a href = "#Jan">January</a></li>
+            <li><a href = "#Feb">February</a></li>
+            <li><a href = "#Mar">March</a></li>
+            <li><a href = "#Apr">April</a></li>
+            <li><a href = "#May">May</a></li>
+            <li><a href = "#Jun">June</a></li>
+            <li><a href = "#Jul">July</a></li>
+            <li><a href = "#Aug">August</a></li>
+            <li><a href = "#Sep">September</a></li>
+            <li><a href = "#Oct">October</a></li>
+            <li><a href = "#Nov">November</a></li>
+            <li><a href = "#Dec">December</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" id="mainContainer">
+      <br>
+      <div class="row" id="bodyID">
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id = "Jan">January</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas0">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas0",[10,37,46,26],[20,42,18,29]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas0">
+                  <script type="text/javascript">
+                    createDoughnut(119, 228, "totalCanvas0" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id = "Feb">February</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas1">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas1",[25,42,18,9],[24,50,40,27]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas1">
+                  <script type="text/javascript">
+                    createDoughnut(94, 235, "totalCanvas1" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id ="Mar">March</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas2">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas2",[20,44,11,40],[29,40,42,27]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas2">
+                  <script type="text/javascript">
+                    createDoughnut(115, 253, "totalCanvas2" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id ="Apr">April</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas3">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas3",[45,38,5,41],[26,20,0,39]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas3">
+                  <script type="text/javascript">
+                    createDoughnut(129, 214, "totalCanvas3" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id ="May">May</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas4">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas4",[48,11,4,6],[36,20,35,20]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas4">
+                  <script type="text/javascript">
+                    createDoughnut(69, 180, "totalCanvas4" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id ="Jun">June</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas5">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas5",[14,20,27,49],[40,36,50,21]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas5">
+                  <script type="text/javascript">
+                    createDoughnut(110, 257, "totalCanvas5" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id ="Jul">July</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas6">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas6",[50,8,15,26],[34,17,41,0]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas6">
+                  <script type="text/javascript">
+                    createDoughnut(99, 191, "totalCanvas6" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id ="Aug">August</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas7">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas7",[46,34,20,26],[50,29,39,11]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas7">
+                  <script type="text/javascript">
+                    createDoughnut(126, 255, "totalCanvas7" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id = "Sep">September</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas8">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas8",[36,47,6,28],[6,5,5,38]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas8">
+                  <script type="text/javascript">
+                    createDoughnut(117, 171, "totalCanvas8" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id = "Oct">October</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas9">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas9",[3,0,30,28],[27,21,27,46]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas9">
+                  <script type="text/javascript">
+                    createDoughnut(61, 182, "totalCanvas9" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id = "Nov">November</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas10">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas10",[38,32,22,6],[8,19,15,45]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas10">
+                  <script type="text/javascript">
+                    createDoughnut(98, 185, "totalCanvas10" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="well">
+            <h3 id = "Dec">December</h3>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Attendance by module</h4>
+                <br>
+                <canvas id="stackedCanvas11">
+                  <br>
+                  <script type="text/javascript">
+                    createStackedAttendance("stackedCanvas11",[38,6,12,48],[46,11,25,32]);
+                  </script>
+                </canvas>
+              </div>
+              <h4>Total attendance</h4>
+              <div class="col-md-6">
+                <canvas id="totalCanvas11">
+                  <script type="text/javascript">
+                    createDoughnut(104, 218, "totalCanvas11" );
+                  </script>
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

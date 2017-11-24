@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel = "stylesheet" type="text/css" href = "Style.css"/>
+    <title>Analytics</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+    <script src = "RatioDoughnut.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primaryNav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="primaryNav">
+          <ul class="nav navbar-nav">
+            <li><a href="Attendance.html">Attendance</a></li>
+            <li class = "active"><a href="Exams.html">Exams</a></li>
+            <li><a href="Coursework.html">Coursework</a></li>
+            <li><a href="GroupData.html">Group Data</a></li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav secondMenu">
+            <li><a href = "#CSC1021">CSC1021</a></li>
+            <li><a href = "#CSC1022">CSC1022</a></li>
+            <li><a href = "#CSC1023">CSC1023</a></li>
+            <li><a href = "#CSC1024">CSC1024</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" id = "mainContainer">
+      <br/>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="CSC1021">CSC1021</h2>
+          <br/>
+          <div class="well">
+            <div class ="row">
+              <div class = "col-md-4">
+                <div>
+                  <h4>Mark: 67% </h4>
+                  <canvas id ="markCanvas0">
+                    <script type ="text/javascript">
+                      createDoughnut(67, 100, "markCanvas0");
+                    </script>
+                  </canvas>
+                </div>
+              </div>
+              <div class = "col-md-4">
+                <div>
+                  <h4>Class: Upper second</h4>
+                  <canvas id ="classCanvas0"></canvas>
+                  <script type ="text/javascript">
+                    createDoughnut(75, 100, "classCanvas0");
+                  </script>
+                </div>
+              </div>
+              <div class = "col-md-4">
+                <div>
+                  <h4>Time taken: 59 minutes</h4>
+                  <canvas id ="timeTakenCanvas0">
+                  </canvas>
+                  <script type ="text/javascript">
+                    createDoughnut(59, 60, "timeTakenCanvas0");
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="CSC1022">CSC1022</h2>
+          <br/>
+          <div class="well">
+            <div class ="row">
+              <div class = "col-md-4">
+                <h4>Mark: 75% </h4>
+                <canvas id ="markCanvas1">
+                </canvas>
+                <script type ="text/javascript">
+                  createDoughnut(75, 100, "markCanvas1");
+                </script>
+              </div>
+              <div class = "col-md-4">
+                <h4>Class: First</h4>
+                <canvas id ="classCanvas1"></canvas>
+                <script type ="text/javascript">
+                  createDoughnut(100, 100, "classCanvas1");
+                </script>
+              </div>
+              <div class = "col-md-4">
+                <h4>Time taken: 30 minutes</h4>
+                <canvas id ="timeTakenCanvas1">
+                </canvas>
+                <script type ="text/javascript">
+                  createDoughnut(30, 45, "timeTakenCanvas1");
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="CSC1023">CSC1023</h2>
+          <br/>
+          <div class="well">
+            <div class ="row">
+              <div class = "col-md-4">
+                <h4>Mark: 30% </h4>
+                <canvas id ="markCanvas2">
+                </canvas>
+                <script type ="text/javascript">
+                  createDoughnut(30, 100, "markCanvas2");
+                </script>
+              </div>
+              <div class = "col-md-4">
+                <h4>Failed</h4>
+                <canvas id ="classCanvas2"></canvas>
+                <script type ="text/javascript">
+                  createDoughnut(0, 100, "classCanvas2");
+                </script>
+              </div>
+              <div class = "col-md-4">
+                <h4>Time taken: 10 minutes</h4>
+                <canvas id ="timeTakenCanvas2">
+                </canvas>
+                <script type ="text/javascript">
+                  createDoughnut(10, 60, "timeTakenCanvas2");
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="CSC1024">CSC1024</h2>
+          <br/>
+          <div class="well">
+            <div class ="row">
+              <div class = "col-md-4">
+                <h4>Mark: 41% </h4>
+                <canvas id ="markCanvas3">
+                </canvas>
+                <script type ="text/javascript">
+                  createDoughnut(41, 100, "markCanvas3");
+                </script>
+              </div>
+              <div class = "col-md-4">
+                <h4>Class: Third</h4>
+                <canvas id ="classCanvas3"></canvas>
+                <script type ="text/javascript">
+                  createDoughnut(25, 100, "classCanvas3");
+                </script>
+              </div>
+              <div class = "col-md-4">
+                <h4>Time taken: 54 minutes</h4>
+                <canvas id ="timeTakenCanvas3">
+                </canvas>
+                <script type ="text/javascript">
+                  createDoughnut(54, 60, "timeTakenCanvas3");
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
